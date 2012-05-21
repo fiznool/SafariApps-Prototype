@@ -1,5 +1,5 @@
 body {
-  width: 320px;
+  width: 335px; /* Account for Overflow: scroll on child */;
   height: 480px;
   padding: 0;
   
@@ -9,8 +9,10 @@ body {
   height: 100%;
   width: 100%;
   border: 2px dotted red;
-  overflow: hidden;
+  overflow: auto;
 }
+
+
 
 .navbar-fixed-top {
   margin: 0;
@@ -19,6 +21,10 @@ body {
 .form-search {
   padding: 5px 0;
   margin: 0 auto;
+}
+
+.container {
+  overflow: auto;
 }
 
 .advert-container {
