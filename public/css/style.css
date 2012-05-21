@@ -1,0 +1,82 @@
+body {
+  width: 320px;
+  height: 480px;
+  padding: 0;
+  
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted red;
+  overflow: hidden;
+}
+
+.navbar-fixed-top {
+  margin: 0;
+}
+
+.form-search {
+  padding: 5px 0;
+  margin: 0 auto;
+}
+
+.advert-container {
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: 5px 0;
+  position: relative;
+  color: #efefef;
+}
+
+.advert-container h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.ac-5x2 {
+  background-image: url('../img/advert-5x2.jpg');
+  height: 130px;
+}
+
+.ac-2x1 {
+  background-image: url('../img/advert-2x1.jpg');
+  height: 160px;
+}
+
+.ac-5x3 {
+  background-image: url('../img/advert-5x3.jpg');
+  height: 192px;
+}
+
+.ac-5x4 {
+  background-image: url('../img/advert-5x4.jpg');
+  height: 256px;
+}
+
+.advert-title,
+.advert-text {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  padding: 5px;
+}
+
+.advert-title {
+  top: 0;
+  display: inline-block;
+}
+
+.advert-text {
+  bottom: 0;
+  padding-right: 10px;
+}
+
+.advert-text p {
+  margin: 0;
+}
+
+.list-arrow {
+  float: right;
+  margin-top: 4px;
+}
