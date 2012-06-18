@@ -1,16 +1,11 @@
-require 'rack'
-
-use Rack::Static, 
-  :urls => ["/css", "/img", "/js"],
-  :root => "public"
-
-run lambda { |env|
-  [
-    200, 
-    {
-      'Content-Type'  => 'text/html', 
-      'Cache-Control' => 'public, max-age=86400' 
-    },
-    File.open('public/places.html', File::RDONLY)
-  ]
-}
+# config.ru
+require "rubygems"
+require "bundler/setup"
+require "sinatra"
+require "haml"
+require "./app"
+ 
+set :run, false
+set :raise_errors, true
+ 
+run Sinatra::Application
