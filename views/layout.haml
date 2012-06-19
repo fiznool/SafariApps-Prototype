@@ -30,9 +30,10 @@
                                   %li.active
                                     %a{:href => "#"} Home
                               / /.nav-collapse
-                        %form.form-search
-                          %input.input-medium.search-query{:type => "search"}
-                            %button.btn{:type => "submit"} Search
+                        - if locals[:searchbar]
+                          %form.form-search
+                            %input.input-medium.search-query{:type => "search"}
+                              %button.btn{:type => "submit"} Search
                       .container
                         =yield
                       / /container

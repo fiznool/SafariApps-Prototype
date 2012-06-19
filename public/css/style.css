@@ -87,3 +87,15 @@ body {
   float: right;
   margin-top: 4px;
 }
+
+.controls-container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0px;
+  width: 90%;
+  border-bottom: 1px solid grey;
+}
+
+.controls-container .btn {
+  width: 100px;
+}
