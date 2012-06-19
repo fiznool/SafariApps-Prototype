@@ -12,8 +12,6 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-
-
 .navbar-fixed-top {
   margin: 0;
 }
@@ -34,6 +32,11 @@ body {
   margin: 5px 0;
   position: relative;
   color: #efefef;
+  display: block;
+}
+
+.advert-container:hover {
+  color: #afafaf;
 }
 
 .advert-container h2 {
@@ -91,11 +94,42 @@ body {
 .controls-container {
   text-align: center;
   margin: 0 auto;
-  padding: 10px 0px;
-  width: 90%;
-  border-bottom: 1px solid grey;
+  padding: 10px 0;
+  width: 100%;
+  background: #f0f0f0;
 }
 
 .controls-container .btn {
   width: 100px;
+  margin: 0 15px;
+}
+
+.img-slider {
+  width: 100%;
+}
+
+.img-slider ul {
+  margin: 0;
+}
+
+.img-slider ul li {
+  display: none;
+}
+
+.img-slider ul li:first-child {
+  display: inherit;
+}
+
+.slider-nav {
+  text-align: center;
+  font-size: 2em;
+  color: #ADBECC;
+}
+
+.slider-nav .on {
+  color: black;
+}
+
+.body-container {
+  padding: 5px;
 }
