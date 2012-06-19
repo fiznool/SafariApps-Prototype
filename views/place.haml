@@ -2,14 +2,42 @@
   Lantern Hotel
 
 .controls-container
-  %button.btn.btn-success{:href => "#"}
-    %i.icon-bell.icon-white
+  %button.btn.btn-large.btn-success{:href => "#"}
+    %i.icon-phone
     Call
-  %button.btn.btn-info{:href => "#"}
-    %i.icon-share.icon-white
-    Website
-.images-container
-  .content-img
-    %img hto
+  %button.btn.btn-large.btn-info{:href => "#"}
+    %i.icon-globe
+    %span  Website
+.img-slider
+  %ul
+    %li.ac-2x1
+    %li.ac-2x1
+    %li.ac-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
 .body-container
-  %p An award winning establishment, we have lanterns on every table. Fact.
+  %h2 We won't let you down.
+  %p First of all, we are an award winning establishment.
+  %p Second of all, we have lanterns on every table. Fact.
+  %p Reasons why you should stay with us:
+  %ol
+    %li We are an award winning establishment.
+    %li We have lanterns on every table.
+  %p So don't mess with the rest, come to the best!
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });

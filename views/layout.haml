@@ -2,47 +2,42 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}
-      %title SafariApps Prototype
-      %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-        %meta{:content => "", :name => "description"}
-          %meta{:content => "", :name => "author"}
-            / Le styles
-            %link{:href => "css/bootstrap.css", :rel => "stylesheet"}
-              %link{:href => "css/bootstrap-responsive.css", :rel => "stylesheet"}
-                %link{:href => "css/style.css", :rel => "stylesheet"}
-                  %body
-                    .hidden-desktop.app
-                      %header.app-header
-                        .navbar.navbar-fixed-top
-                          .navbar-inner
-                            .container
-                              %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-                                %span.icon-bar
-                                %span.icon-bar
-                                %span.icon-bar
-                              %a.brand{:href => "#"} 
-                                = yield_content :title
-                              .nav-collapse
-                                %ul.nav
-                                  /
-                                    <li><a href="#about">About</a></li>
-                                    <li><a href="#contact">Contact</a></li>
-                                  %li.active
-                                    %a{:href => "#"} Home
-                              / /.nav-collapse
-                        - if locals[:searchbar]
-                          %form.form-search
-                            %input.input-medium.search-query{:type => "search"}
-                              %button.btn{:type => "submit"} Search
-                      .container
-                        =yield
-                      / /container
-                    .visible-desktop
-                      %h1 Your browser window is too big. Make it smaller!
-                    /
-                      Le javascript
-                      \==================================================
-                    / Placed at the end of the document so the pages load faster
-                    %script{:src => "js/jquery.js"}
-                    %script{:src => "js/bootstrap.js"}
-                    :javascript
+    %title SafariApps Prototype
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    / Le styles
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet"}
+    %link{:href => "css/bootstrap-responsive.css", :rel => "stylesheet"}
+    %link{:href => "css/font-awesome.css", :rel => "stylesheet"}
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+    %script{:src => "js/jquery.js"}
+    %script{:src => "js/bootstrap.js"}
+    %script{:src => "js/swipe.js"}
+  %body
+    .hidden-desktop.app
+      %header.app-header
+        .navbar.navbar-fixed-top
+          .navbar-inner{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            .container
+              %a.btn.btn-navbar
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %a.brand
+                = yield_content :title
+              .nav-collapse
+                %ul.nav
+                  %li
+                    %a{:href => "/"} Places to Stay
+              / /.nav-collapse
+        - if locals[:searchbar]
+          %form.form-search
+            %input.input-medium.search-query{:type => "search"}
+              %button.btn{:type => "submit"} Search
+      .container
+        =yield
+      / /container
+    .visible-desktop
+      %h1 Your browser window is too big. Make it smaller!
+      %h2 If you are on iPad, rotate it to portrait mode.
