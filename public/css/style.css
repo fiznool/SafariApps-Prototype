@@ -26,42 +26,35 @@ body {
   width: 100%;
 }
 
-.advert-container {
-  width: 100%;
+.container ul {
+  list-style: none;
+  margin: 0;
+}
+
+.container ul li {
+  width: 98%;
   background-repeat: no-repeat;
-  margin: 5px 0;
+  margin: 1%;
   position: relative;
   color: #efefef;
   display: block;
 }
 
-.advert-container:hover {
+.container ul li a {
+  color: inherit;
+}
+
+.container ul li:hover {
   color: #afafaf;
 }
 
-.advert-container h2 {
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.ac-5x2 {
-  background-image: url('../img/advert-5x2.jpg');
-  height: 130px;
+.adverts {
+  color: white;
 }
 
 .ac-2x1 {
   background-image: url('../img/advert-2x1.jpg');
   height: 160px;
-}
-
-.ac-5x3 {
-  background-image: url('../img/advert-5x3.jpg');
-  height: 192px;
-}
-
-.ac-5x4 {
-  background-image: url('../img/advert-5x4.jpg');
-  height: 256px;
 }
 
 .advert-title,
@@ -75,6 +68,8 @@ body {
 .advert-title {
   top: 0;
   display: inline-block;
+  font-size: 18px;
+  line-height: 1.5em;
 }
 
 .advert-text {
@@ -109,7 +104,8 @@ body {
 }
 
 .img-slider {
-  width: 100%;
+  width: 98%;
+  margin: 1%;
 }
 
 .img-slider ul {
@@ -136,4 +132,21 @@ body {
 
 .body-container {
   padding: 5px;
+}
+
+ul.animals li {
+  width: 96%;
+  margin: 2%;
+  border-top: 1px solid #EFEFEF;
+  color: #444;
+}
+
+ul.animals li a img {
+  float: left;
+  padding: 5px 10px 5px 5px;
+  height: 40px;
+}
+
+ul.animals .list-arrow {
+  margin-top: 12px;
 }
