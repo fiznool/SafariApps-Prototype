@@ -8,6 +8,7 @@ body {
 .app {
   height: 100%;
   width: 100%;
+  background-color: #FAFAFA;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -17,35 +18,42 @@ body {
 }
 
 .form-search {
-  padding: 5px 0;
-  margin: 0 auto;
+  padding: 10px 10px 5px 10px;
+  margin: 0;
+  text-align: center;
 }
 
-.container {
+.form-search .input-medium{
+  width: 70%;
+}
+
+.content {
   overflow: auto;
   width: 100%;
 }
 
-.container ul {
+.content nav ul {
   list-style: none;
   margin: 0;
 }
 
-.container ul li {
+.content nav ul li {
   width: 98%;
   background-repeat: no-repeat;
   margin: 1%;
   position: relative;
   color: #efefef;
+}
+
+.content nav ul li a {
+  color: inherit;
+  height: 100%;
   display: block;
 }
 
-.container ul li a {
-  color: inherit;
-}
-
-.container ul li:hover {
+.content nav ul li a:hover {
   color: #afafaf;
+  text-decoration: none;
 }
 
 .adverts {
@@ -88,15 +96,17 @@ body {
 
 .controls-container {
   text-align: center;
-  margin: 0 auto;
+  margin: 5px auto;
   width: 100%;
 }
 
 .controls-container .controls {
   margin: 0 5px;
   padding: 10px 0;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  background-color: #f0f0f0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .controls-container .btn {
@@ -104,8 +114,7 @@ body {
 }
 
 .img-slider {
-  width: 98%;
-  margin: 1%;
+  width: 100%;
 }
 
 .img-slider ul {
@@ -118,6 +127,10 @@ body {
 
 .img-slider ul li:first-child {
   display: inherit;
+}
+
+.img-slider ul li>div {
+  margin: 5px;
 }
 
 .slider-nav {
@@ -134,19 +147,37 @@ body {
   padding: 5px;
 }
 
-ul.animals li {
+.body-container h2 {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 15px;
+}
+
+.body-container h2 small{
+  float: right;
+}
+
+nav.animals ul li {
   width: 96%;
   margin: 2%;
   border-top: 1px solid #EFEFEF;
   color: #444;
 }
 
-ul.animals li a img {
+nav.animals ul li a img {
   float: left;
   padding: 5px 10px 5px 5px;
   height: 40px;
 }
 
-ul.animals .list-arrow {
+nav.animals ul li a small {
+  display: block;
+}
+
+nav.animals .list-arrow {
   margin-top: 12px;
+}
+
+.animal-2x1 {
+  background-image: url('../img/lion-2x1.jpg');
+  height: 160px;
 }
