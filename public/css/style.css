@@ -94,14 +94,18 @@ body {
 .controls-container {
   text-align: center;
   margin: 0 auto;
-  padding: 10px 0;
   width: 100%;
-  background: #f0f0f0;
+}
+
+.controls-container .controls {
+  margin: 0 5px;
+  padding: 10px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .controls-container .btn {
-  width: 100px;
-  margin: 0 15px;
+  margin: 0 5px;
 }
 
 .img-slider {
