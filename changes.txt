@@ -1,0 +1,15 @@
+Changes
+
+- Choose font
+
+places
+
+- Skinnable background colour (other than white)
+- Picture slight padding (see BBC News app)
+- Improve Search bar
+
+place
+
+- 'More funky looking' icon
+- Padding on picture (see BBC News app)
+
