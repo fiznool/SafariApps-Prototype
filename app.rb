@@ -3,15 +3,23 @@
 set:haml, :format => :html5
 
 get '/' do 
-  haml :animals, :locals => { :searchbar => true }
+  haml :welcome, :locals => { :searchbar => true }
+end
+
+get '/welcome' do
+  haml :welcome, :locals => { :searchbar => true }
+end
+
+get '/info' do
+  haml :info
 end
 
 get '/animals' do
   haml :animals, :locals => { :searchbar => true }
 end
 
-get '/animals-2x1' do
-  haml :animals_2x1, :locals => { :searchbar => true }
+get '/animals-small' do
+  haml :animals_small, :locals => { :searchbar => true }
 end
 
 get '/animal' do

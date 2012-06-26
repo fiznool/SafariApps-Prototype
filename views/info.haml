@@ -1,0 +1,39 @@
+- content_for :title do
+  Maasai Mara
+
+.img-slider
+  %ul
+    %li
+      .info-2x1
+    %li
+      .info-2x1
+    %li
+      .info-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
+.body-container
+  %h2 
+    Maasai Mara
+    
+  %p Maasai Mara (Masai Mara) is known as Africa’s Greatest Wildlife Reserve, situated in southwest Kenya. Famous for the abundance of lion, the Great Wildebeest Migration and the Maasai people, well known for their distinctive custom and dress, it is without a doubt Africa’s most famous safari destination.
+
+  %p Maasai Mara National Reserve stretches 1,510 sq km (580 sq miles) and raises 1,500-2,170 meters above sea level. The terrain of the reserve is primarily grassland and riverine forest with clumps of the distinctive acacia trees. It’s about 270 km from the capital city Nairobi and takes about 5-6 hours by road or 40-45 minutes by flight.
+
+  %p The Maasai Mara Ecosystem holds one of the highest lion densities in world and this is where over TWO MILLION Wildebeest, Zebra and Thomsons Gazelle migrate annually. Its hosts over 95 species of mammals and 570 recorded species of birds.
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });
