@@ -18,7 +18,7 @@ body {
 }
 
 .form-search {
-  padding: 10px 10px 5px 10px;
+  padding: 10px 5px;
   margin: 0;
   text-align: center;
 }
@@ -38,17 +38,19 @@ body {
 }
 
 .content nav ul li {
-  width: 98%;
-  background-repeat: no-repeat;
-  margin: 1%;
-  position: relative;
-  color: #efefef;
+  width: 96%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 0 1%;
+  height: 45px;
+  border-top: 1px solid #EFEFEF;
+  color: #444;
 }
 
 .content nav ul li a {
-  color: inherit;
-  height: 100%;
-  display: block;
+  color: #444;
 }
 
 .content nav ul li a:hover {
@@ -56,8 +58,46 @@ body {
   text-decoration: none;
 }
 
-.adverts {
-  color: white;
+.content nav ul li a .list-title {
+  line-height: 45px;
+}
+
+nav.adverts ul li {
+  width: 98%;
+  background-repeat: no-repeat;
+  margin: 1%;
+  min-height: 160px;
+  border-top: none;
+  padding: 0;
+  position:relative;
+}
+
+nav.adverts ul li a {
+  color: #efefef;
+  height: 100%;
+  display: block;
+}
+
+nav ul li a img {
+  float: left;
+  padding-right: 10px;
+  height: 45px;
+}
+
+nav ul li a h3 {
+  font-size: 16px;
+}
+
+nav ul li a small {
+  display: block;
+}
+
+nav .list-arrow {
+  margin-top: 15px;
+}
+
+nav.welcome ul li a h3 {
+  line-height: 48px;
 }
 
 .ac-2x1 {
@@ -156,28 +196,13 @@ body {
   float: right;
 }
 
-nav.animals ul li {
-  width: 96%;
-  margin: 2%;
-  border-top: 1px solid #EFEFEF;
-  color: #444;
-}
-
-nav.animals ul li a img {
-  float: left;
-  padding: 5px 10px 5px 5px;
-  height: 40px;
-}
-
-nav.animals ul li a small {
-  display: block;
-}
-
-nav.animals .list-arrow {
-  margin-top: 12px;
-}
 
 .animal-2x1 {
   background-image: url('../img/lion-2x1.jpg');
+  height: 160px;
+}
+
+.info-2x1 {
+  background-image: url('../img/mara-2x1.jpg');
   height: 160px;
 }
