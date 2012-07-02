@@ -1,0 +1,35 @@
+- content_for :title do
+  Cattle Egrit
+
+.img-slider
+  %ul
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
+.body-container
+  %h2 
+    Cattle Egrit
+
+  %p Generally all white except for a golden crown and neck during breeding season. It has a bright yellow bill and short yellow legs. A common egret found alongside large mammals and domestic livestock in large flocks, often on the backs of their hosts where it feeds on insects (including locusts and grasshoppers) disturbed by the moving beasts. It can be found on dry grasslands often at a considerable distance from water.
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });

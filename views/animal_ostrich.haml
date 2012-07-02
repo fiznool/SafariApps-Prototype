@@ -1,0 +1,35 @@
+- content_for :title do
+  Ostrich
+
+.img-slider
+  %ul
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
+.body-container
+  %h2 
+    Common Ostrich
+
+  %p The males can be distinguished from their blackish body feathering with white wings and tail, neck and thigh colouration, which is pinkish in the Common Ostrich and blue in the Somali. Females are largely brown. It is very tall, with a head height of over 2m high. It is the world’s largest flightless bird, has the fastest land speed of any bird (70kmh) as well as laying the largest eggs.
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });

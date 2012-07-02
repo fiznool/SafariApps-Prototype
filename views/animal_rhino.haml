@@ -1,0 +1,60 @@
+- content_for :title do
+  Rhino
+
+.img-slider
+  %ul
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
+.body-container
+  %h2 
+    Rhino
+    %small KIFARU
+
+  %ul.nav.nav-tabs
+    %li.active
+      %a{:href => "#overview", :"data-toggle" => "tab"} Overview
+    %li
+      %a{:href => "#facts", :"data-toggle" => "tab"} Facts
+
+  .tab-content
+    .tab-pane.active#overview
+      %p There are two distinct types of Rhino in Kenya, and the one found in the Mara is called the black rhino. It is a very large animal, standing up to 1.7m tall and can weigh over 1500kg. It has 2 large horn on the nose, the front one being the longest and in exceptional circumstances, been measured at over a meter long, but typically between 50-60cm.
+
+      %p Rhino are an endangered species due to an increase in poaching. The horn, made from keratin (the main protein found in hair and nails) is used in the Middle East for traditional dagger handles, a sign of wealth, and the middle east, where it is believed to be an aphrodisiac.
+
+    .tab-pane#facts
+      %ul
+        %li One of the Big Five
+        %li Small brain for an animal this size
+        %li Has exceptionally thick skin 1-1.5cm, almost like armored plating.
+        %li Has a pointed mouth for eating leaves form trees and bushes
+        %li Enemies: Few, except lion, hyena and other large predators when young
+        %li Longevity:
+        %li Gestation:
+        %li Average rhino horn can fetch $250,000
+        %li 2011 saw over 400 rhino poached for their horn in South Africa alone!
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+
+
+  });

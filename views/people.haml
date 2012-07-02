@@ -1,0 +1,72 @@
+- content_for :title do
+  Maasai People
+
+.img-slider
+  %ul
+    %li
+      .info-2x1
+    %li
+      .info-2x1
+    %li
+      .info-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
+.body-container
+  %h2 
+    Maasai People
+
+  .accordion#accordion
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{:href => "#people", :"data-toggle" => "collapse", :"data-parent" => "#accordion"} People
+      .accordion-body.collapse.in#people
+        .accordion-inner
+          The Maasai people are among the best known of the African ethnic groups and are famous for the fearsome reputation as warriors. They are a semi-nomadic people living mainly in Kenya and Northern Tanzania and it is believed they came to Eastern Africa from Southern Sudan around the 15th Century.
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{:href => "#history", :"data-toggle" => "collapse", :"data-parent" => "#accordion"} History
+      .accordion-body.collapse#history
+        .accordion-inner
+          There is no written history of the Maasai people, and what is known has been passed down from generation to generation in their stories. They travelled south in the 15th century and either forcibly displaced the many ethnic groups in their path, or assimilated them into Maasai society. In the mid 19th century, they covered almost the entire Great Rift Valley but this period of expansion was followed by the Maasai ‘Emutai’. The ‘Emutai’ was a decade of disaster in the 1890s and early 1900’s that is estimated to have killed 60-70% of the Maasai population. This period was marked by epidemics of bovine pleuropneumonia and rinderpest, which decimated their cattle stocks.
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{:href => "#cattle", :"data-toggle" => "collapse", :"data-parent" => "#accordion"} Cattle
+      .accordion-body.collapse#cattle
+        .accordion-inner
+          Traditional Maasai lifestyle centers around their cattle which is a measure of ones wealth and a religious belief relates that Enkai (God) gave them all the cattle in the world leading to the belief that cattle rustling is simply a matter of taking back what is rightfully theirs. The Maasai hardly ever kill their cattle, except on the most special of occasions.
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{:href => "#society", :"data-toggle" => "collapse", :"data-parent" => "#accordion"} Society
+      .accordion-body.collapse#society
+        .accordion-inner
+          Maasai society is very much based on ones age-set. It is highly patriarchal with the ‘elders’ making all major decisions. Young boys tend to mind the cattle until the there mid-teens where they are welcomed into adulthood through a circumcision ceremony to become a Moran (warrior). The Moran’s job is to protect the village and cattle. To prove ones manhood, a Moran was expected to kill a lion, a practice no longer in existence. Women look after the young, prepare food (a famous Maasai drink consists of milk and blood), collect firewood and water, and repair the Manyatta.
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{:href => "#dress", :"data-toggle" => "collapse", :"data-parent" => "#accordion"} Dress
+      .accordion-body.collapse#dress
+        .accordion-inner
+          Maasai dress consists of a large red shuka (cloak) wrapped around their body and proudly holding a spear in one hand. Moran’s (warriors), on special occasions, wear elaborate head-dresses with a lions mane or eagle feathers and often have their hair dyed blood-red or on. The women are famous for their bead working skills.
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{:href => "#shelter", :"data-toggle" => "collapse", :"data-parent" => "#accordion"} Shelter
+      .accordion-body.collapse#shelter
+        .accordion-inner
+          The Manyatta is the Maasai home, an enclosure with many huts where the tribe live surrounded by a think fence made from thorny acacia bushes. The cattle too are kept inside this fence to protect them from wild animals. Each hut is made with timber poles fixed into the ground and interwoven with a lattice of smaller branches. It is then plastered with a mixture of mud, sticks grass and cow dung to make the house waterproof.
+    
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });
