@@ -1,0 +1,53 @@
+- content_for :title do
+  Cape Buffalo
+
+.img-slider
+  %ul
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+    %li
+      .animal-2x1
+%nav.slider-nav
+  %em.on •
+  %em •
+  %em •
+.body-container
+  %h2 
+    Cape Buffalo
+    %small NYATI
+
+  %p Easily identified by their large size and similar looks to cattle. The Cape buffalo has a very large set of horns in both sexes with fused bases to create a very powerful looking ‘helmet’ called a ‘boss’. The head is carried low with the top below the backline. The buffalo has a black or dark brown coat that darkens with age.
+
+  %p It is one of the most successful grazers and lives in swamps, floodplains, grasslands and forest all over Central, Eastern and Southern Africa, but prefer a habitat with dense cover. Buffalo have been found in herds of up 200+ individuals when out on the plains, but usually in much smaller herds. They require water daily so are seldom found more than 15km away from water.
+
+  %p Lion are the biggest threat to Buffalo, and can bring down an adult bull with the help of the pride, but has been known for a lone male lion to bring one down by himself.
+
+  %p The Cape Buffalo has always been a major attraction to big game hunters, who seek out the biggest and strongest bulls. It is one of the most dangerous animals to hunt and has often been nicknamed the ‘widow maker’. When wounded, has been known to ambush and attack pursuers. Over 200 people are gored or killed each year.
+
+  %ul
+    %li One of the Big Five
+    %li Gestation: 11-12 months
+    %li Calves hidden in the vegetation for the first few weeks and thereafter kept in the middle of the herd.
+    %li Longevity: 20 years in the wild, 26 in captivity
+    %li Food: Grass and foliage mainly, but depends on the season
+    %li Enemies: Lion and crocodiles when drinking. Young also prone to Hyena
+    %li Have suffered severe population collapses due to rinderpest and pleuro-pneumonia
+    %li Can weigh up to 1200kg
+
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });

@@ -14,16 +14,32 @@ get '/info' do
   haml :info
 end
 
+get '/people' do
+  haml :people
+end
+
 get '/animals' do
   haml :animals, :locals => { :searchbar => true }
 end
 
-get '/animals-small' do
-  haml :animals_small, :locals => { :searchbar => true }
+get '/animal' do
+  haml :animal_rhino
 end
 
-get '/animal' do
-  haml :animal
+get '/animal-rhino' do
+  haml :animal_rhino
+end
+
+get '/animal-buffalo' do
+  haml :animal_buffalo
+end
+
+get '/animal-ostrich' do
+  haml :animal_ostrich
+end
+
+get '/animal-egrit' do
+  haml :animal_egrit
 end
 
 get '/places' do
