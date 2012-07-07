@@ -1,8 +1,28 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   width: 320px;
   height: 480px;
   padding: 0;
   
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
 
 .app {
@@ -38,7 +58,7 @@ body {
 }
 
 .content nav ul li {
-  width: 96%;
+  width: 98%;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 1%;
@@ -154,6 +174,7 @@ nav.welcome ul li a h3 {
 
 .img-slider {
   width: 100%;
+  position: relative;
 }
 
 .img-slider ul {
@@ -162,6 +183,7 @@ nav.welcome ul li a h3 {
 
 .img-slider ul li {
   display: none;
+  position: relative;
 }
 
 .img-slider ul li:first-child {
@@ -203,5 +225,131 @@ nav.welcome ul li a h3 {
 
 .info-2x1 {
   background-image: url('../img/mara-2x1.jpg');
+  height: 160px;
+}
+
+.dashboard {
+  position: relative;
+}
+
+.dashboard h2 {
+  text-align: center;
+}
+
+.dashboard h3 {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.dashboard ul.dashlinks {
+  width: 280px;
+  margin: 5px auto;
+  list-style: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.dashboard .dashrow {
+  width: 100%;
+}
+
+.dashboard li.dashlink a {
+  display: block;
+  float: left;
+  width: 120px;
+  height: 100px;
+  margin: 10px;
+  background-color: gray;
+  position: relative;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.6);
+}
+
+.dashboard li.dashlink a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.dashboard li.dashlink a.welcome {
+  background-image: url('../img/dashlink-welcome.jpg');
+}
+
+.dashboard li.dashlink a.wildlife {
+  background-image: url('../img/dashlink-wildlife.jpg');
+}
+
+.dashboard li.dashlink a.stay {
+  background-image: url('../img/dashlink-stay.jpg');
+}
+
+.dashboard li.dashlink a.outfitters {
+  background-image: url('../img/dashlink-outfitters.jpg');
+}
+
+.dashboard li.dashlink a.agents {
+  background-image: url('../img/dashlink-agents.jpg');
+}
+
+.dashboard li.dashlink a.about {
+  background-image: url('../img/dashlink-about.jpg');
+}
+
+.dashboard .dashlink a h3 {
+  color: #efefef;
+  position:absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.dashboard li.dashlink a:hover h3{
+  color: #afafaf;
+  text-decoration: none;
+}
+
+.dashboard .logo-overlay {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 40px;
+  width: 60px;
+  background-image: url('../img/logo.jpg');
+  z-index: 2;
+  opacity: 0.7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.dash-1 {
+  background-image: url('../img/mara-2x1.jpg');
+  height: 160px;
+}
+
+.dash-2 {
+  background-image: url('../img/lion-2x1.jpg');
+  height: 160px;
+}
+
+.dash-3 {
+  background-image: url('../img/sunset.jpg');
   height: 160px;
 }
