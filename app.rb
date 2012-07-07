@@ -3,7 +3,11 @@
 set:haml, :format => :html5
 
 get '/' do 
-  haml :welcome, :locals => { :searchbar => true }
+  haml :dashboard, :locals => { :dashboard => true }
+end
+
+get '/dashboard' do 
+  haml :dashboard, :locals => { :dashboard => true }
 end
 
 get '/welcome' do
