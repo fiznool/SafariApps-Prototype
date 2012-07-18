@@ -26,6 +26,10 @@ get '/animals' do
   haml :animals, :locals => { :searchbar => true }
 end
 
+get '/birds' do
+  haml :birds, :locals => { :searchbar => true }
+end
+
 get '/animal' do
   haml :animal_rhino
 end
@@ -44,6 +48,10 @@ end
 
 get '/animal-egrit' do
   haml :animal_egrit
+end
+
+get '/places-select' do
+  haml :places_select, :locals => { :searchbar => true }
 end
 
 get '/places' do
