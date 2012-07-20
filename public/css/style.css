@@ -266,7 +266,7 @@ nav.welcome ul li a h3 {
 }
 
 .dashboard ul.dashlinks {
-  width: 280px;
+  width: 300px;
   margin: 5px auto;
   list-style: none;
   -webkit-border-radius: 5px;
@@ -281,13 +281,14 @@ nav.welcome ul li a h3 {
 .dashboard li.dashlink a {
   display: block;
   float: left;
-  width: 120px;
+  width: 134px;
   height: 100px;
-  margin: 10px;
+  margin: 8px;
   background-color: gray;
   position: relative;
   background-position: left center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
   cursor: pointer;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -401,4 +402,15 @@ nav.welcome ul li a h3 {
 .dash-3 {
   background-image: url('../img/sunset.jpg');
   height: 160px;
+}
+
+.accordion-inner img {
+  margin-bottom: 9px;
+  -webkit-border-radius: 5px;
+}
+
+.place-type {
+  float: right;
+  text-align: center;
+  margin-top: 3px;
 }
