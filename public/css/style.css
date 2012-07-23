@@ -232,6 +232,18 @@ nav.welcome ul li a h3 {
   float: right;
 }
 
+.body-container h2.animal-header {
+  margin: 0;
+}
+
+.body-container h3.animal-header {
+  text-align: right;
+  font-weight: normal;
+  font-style: italic;
+  color: #888;
+  font-size: 16px;
+}
+
 .price-select {
   padding: 5px;
   text-align: center;
