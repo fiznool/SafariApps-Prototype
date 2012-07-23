@@ -1,1 +1,1 @@
-This is the README file for SafarApps Prototype.
+See a live demo at http://safariapps-prototype.heroku.com/
