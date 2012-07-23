@@ -1,0 +1,63 @@
+.dashboard
+  .img-slider
+    %ul
+      %li
+        .dash-1
+        .logo-overlay
+      %li
+        .dash-2
+        .logo-overlay
+      %li
+        .dash-3
+        .logo-overlay
+  %nav.slider-nav
+    %em.on •
+    %em •
+    %em •
+  .body-container
+    %h2 - Maasai Mara -
+    %h3 Africa's Greatest Wildlife Reserve
+    
+    %ul.dashlinks.wide.clearfix
+      %li.dashlink 
+        %a.welcome{:href => "welcome"}
+          %h3 Jambo!
+      %li.dashlink
+        %a.stay{:href => "places-select"}
+          %h3 Where to Stay
+      %li.dashlink
+        %a.animals{:href => "animals"}
+          %h3 Animals
+      %li.dashlink
+        %a.birds{:href => "birds"}
+          %h3 Birds
+      %li.dashlink
+        %a.outfitters{:href => "places-select"}
+          %h3 Outfitters
+      %li.dashlink
+        %a.agents{:href => "places"}
+          %h3 Travel Agents
+      %li.dashlink
+        %a.kenya{:href => "welcome"}
+          %h3 See Kenya
+      %li.dashlink
+        %a.about
+          %h3 About Us
+
+
+:javascript
+  $(function() {
+    var bullets = $('.slider-nav em');
+    new Swipe($('.img-slider')[0], {
+      auto: 3000,
+      speed: 500,
+      callback: function(e, pos) {
+        var i = bullets.length;
+        while(i--) {
+          bullets[i].className = '';
+        }
+
+        bullets[pos].className = 'on';
+      }
+    });
+  });

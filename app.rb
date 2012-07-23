@@ -3,11 +3,15 @@
 set:haml, :format => :html5
 
 get '/' do 
-  haml :dashboard, :locals => { :dashboard => true }
+  haml :dashboard_wide, :locals => { :dashboard => true }
 end
 
 get '/dashboard' do 
   haml :dashboard, :locals => { :dashboard => true }
+end
+
+get '/dashboard-wide' do 
+  haml :dashboard_wide, :locals => { :dashboard => true }
 end
 
 get '/welcome' do
@@ -52,6 +56,10 @@ end
 
 get '/places-select' do
   haml :places_select, :locals => { :searchbar => true }
+end
+
+get '/outfitters-select' do
+  haml :outfitters_select, :locals => { :searchbar => true }
 end
 
 get '/places' do

@@ -310,6 +310,16 @@ nav.welcome ul li a h3 {
   box-shadow: 2px 2px 1px rgba(0,0,0,0.6);
 }
 
+.dashboard ul.dashlinks.wide {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.dashboard ul.dashlinks.wide li.dashlink a {
+  width: 145px;
+  margin: 5px;
+}
+
 .dashboard li.dashlink a:hover {
   text-decoration: none;
   opacity: 0.8;
